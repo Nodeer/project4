@@ -9,8 +9,10 @@
 #import "ViewController.h"
 #import "Scene.h"
 #import "Score.h"
+#import "GADBannerView.h"
+#import "GADRequest.h"
 
-@interface ViewController ()
+@interface ViewController () <GADBannerViewDelegate>
 @property (weak,nonatomic) IBOutlet SKView * gameView;
 @property (weak,nonatomic) IBOutlet UIView * getReadyView;
 
@@ -18,6 +20,10 @@
 @property (weak,nonatomic) IBOutlet UIImageView * medalImageView;
 @property (weak,nonatomic) IBOutlet UILabel * currentScore;
 @property (weak,nonatomic) IBOutlet UILabel * bestScoreLabel;
+
+@property(nonatomic, strong) GADBannerView *adBanner;
+
+- (GADRequest *)request;
 
 @end
 
@@ -46,6 +52,21 @@
     self.gameOverView.transform = CGAffineTransformMakeScale(.9, .9);
     [self.gameView presentScene:scene];
     
+    
+    // Ads
+    
+    // Initialize the banner at the bottom of the screen.
+    CGPoint origin = CGPointMake(0.0,0);
+    
+    // Use predefined GADAdSize constants to define the GADBannerView.
+    self.adBanner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:origin];
+    
+    // Note: Edit SampleConstants.h to provide a definition for kSampleAdUnitID before compiling.
+    self.adBanner.adUnitID = kSampleAdUnitID;
+    self.adBanner.delegate = self;
+    self.adBanner.rootViewController = self;
+    [self.view addSubview:self.adBanner];
+    [self.adBanner loadRequest:[self request]];
 }
 
 
@@ -63,6 +84,7 @@
         self.gameOverView.transform = CGAffineTransformMakeScale(.8, .8);
         flash.alpha = 0;
         self.getReadyView.alpha = 1;
+        
     } completion:^(BOOL finished) {
         [flash removeFromSuperview];
 
@@ -73,11 +95,14 @@
 {
     [UIView animateWithDuration:.5 animations:^{
         self.getReadyView.alpha = 0;
+        self.adBanner.alpha = 0;
     }];
 }
 
 - (void)eventWasted
 {
+    self.adBanner.alpha = 1;
+    
     flash = [[UIView alloc] initWithFrame:self.view.frame];
     flash.backgroundColor = [UIColor whiteColor];
     flash.alpha = .9;
@@ -126,6 +151,38 @@
     [animation setToValue:[NSValue valueWithCGPoint:
                            CGPointMake([self.view  center].x + 4.0f, [self.view  center].y)]];
     [[self.view layer] addAnimation:animation forKey:@"position"];
+}
+
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+#pragma mark GADRequest generation
+
+- (GADRequest *)request {
+    GADRequest *request = [GADRequest request];
+    
+    // Make the request for a test ad. Put in an identifier for the simulator as well as any devices
+    // you want to receive test ads.
+    request.testDevices = @[
+                            @"42eb1872cb404da31902e40447c01984",
+                            // TODO: Add your device/simulator test identifiers here. Your device identifier is printed to
+                            // the console when the app is launched.
+                            GAD_SIMULATOR_ID
+                            ];
+    return request;
+}
+
+#pragma mark GADBannerViewDelegate implementation
+
+// We've received an ad successfully.
+- (void)adViewDidReceiveAd:(GADBannerView *)adView {
+    NSLog(@"Received ad successfully");
+}
+
+- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error {
+    NSLog(@"Failed to receive ad with error: %@", [error localizedFailureReason]);
 }
 
 @end

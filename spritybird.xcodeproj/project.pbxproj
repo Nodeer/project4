@@ -42,6 +42,18 @@
 		82C6A0BE18A6F53400FEBE9B /* spritybirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0BD18A6F53400FEBE9B /* spritybirdTests.m */; };
 		82C6A0CB18A6FF7400FEBE9B /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C6A0CA18A6FF7400FEBE9B /* SpriteKit.framework */; };
 		82FEEB9418B550BF00AA6C66 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FEEB9318B550BF00AA6C66 /* Main-iPad.storyboard */; };
+		AA80C39018DAFD430005E000 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C38E18DAFD430005E000 /* libGoogleAdMobAds.a */; };
+		AA80C39118DAFD430005E000 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = AA80C38F18DAFD430005E000 /* README.txt */; };
+		AA80C39318DAFFDB0005E000 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C39218DAFFDB0005E000 /* CoreTelephony.framework */; };
+		AA80C39518DAFFE30005E000 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C39418DAFFE30005E000 /* AdSupport.framework */; };
+		AA80C39718DB00070005E000 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C39618DB00070005E000 /* MessageUI.framework */; };
+		AA80C39918DB00160005E000 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C39818DB00160005E000 /* StoreKit.framework */; };
+		AA80C39B18DB002F0005E000 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C39A18DB002F0005E000 /* SystemConfiguration.framework */; };
+		AA80C39D18DB003F0005E000 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C39C18DB003F0005E000 /* MediaPlayer.framework */; };
+		AA80C39F18DB004E0005E000 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C39E18DB004E0005E000 /* AudioToolbox.framework */; };
+		AA80C3A118DB009A0005E000 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C3A018DB009A0005E000 /* AVFoundation.framework */; };
+		AA80C3A318DB082D0005E000 /* Froggy-Jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA80C3A218DB082D0005E000 /* Froggy-Jump.mp3 */; };
+		AA80C3A518DBF8D90005E000 /* Foggy-Drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA80C3A418DBF8D90005E000 /* Foggy-Drop.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +115,27 @@
 		82C6A0E018A79B2400FEBE9B /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		82C6A0E118A79B2400FEBE9B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		82FEEB9318B550BF00AA6C66 /* Main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main-iPad.storyboard"; sourceTree = "<group>"; };
+		AA80C38518DAFD430005E000 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		AA80C38618DAFD430005E000 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		AA80C38718DAFD430005E000 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		AA80C38818DAFD430005E000 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		AA80C38918DAFD430005E000 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		AA80C38A18DAFD430005E000 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		AA80C38B18DAFD430005E000 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		AA80C38C18DAFD430005E000 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		AA80C38D18DAFD430005E000 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		AA80C38E18DAFD430005E000 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		AA80C38F18DAFD430005E000 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		AA80C39218DAFFDB0005E000 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		AA80C39418DAFFE30005E000 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		AA80C39618DB00070005E000 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AA80C39818DB00160005E000 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		AA80C39A18DB002F0005E000 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AA80C39C18DB003F0005E000 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		AA80C39E18DB004E0005E000 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AA80C3A018DB009A0005E000 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AA80C3A218DB082D0005E000 /* Froggy-Jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Froggy-Jump.mp3"; sourceTree = "<group>"; };
+		AA80C3A418DBF8D90005E000 /* Foggy-Drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Foggy-Drop.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +143,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA80C3A118DB009A0005E000 /* AVFoundation.framework in Frameworks */,
+				AA80C39F18DB004E0005E000 /* AudioToolbox.framework in Frameworks */,
+				AA80C39D18DB003F0005E000 /* MediaPlayer.framework in Frameworks */,
+				AA80C39B18DB002F0005E000 /* SystemConfiguration.framework in Frameworks */,
+				AA80C39918DB00160005E000 /* StoreKit.framework in Frameworks */,
+				AA80C39718DB00070005E000 /* MessageUI.framework in Frameworks */,
+				AA80C39518DAFFE30005E000 /* AdSupport.framework in Frameworks */,
+				AA80C39318DAFFDB0005E000 /* CoreTelephony.framework in Frameworks */,
 				82C6A0CB18A6FF7400FEBE9B /* SpriteKit.framework in Frameworks */,
 				82C6A09518A6F53400FEBE9B /* CoreGraphics.framework in Frameworks */,
 				82C6A09718A6F53400FEBE9B /* UIKit.framework in Frameworks */,
 				82C6A09318A6F53400FEBE9B /* Foundation.framework in Frameworks */,
+				AA80C39018DAFD430005E000 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +225,14 @@
 		82C6A09118A6F53400FEBE9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA80C3A018DB009A0005E000 /* AVFoundation.framework */,
+				AA80C39E18DB004E0005E000 /* AudioToolbox.framework */,
+				AA80C39C18DB003F0005E000 /* MediaPlayer.framework */,
+				AA80C39A18DB002F0005E000 /* SystemConfiguration.framework */,
+				AA80C39818DB00160005E000 /* StoreKit.framework */,
+				AA80C39618DB00070005E000 /* MessageUI.framework */,
+				AA80C39418DAFFE30005E000 /* AdSupport.framework */,
+				AA80C39218DAFFDB0005E000 /* CoreTelephony.framework */,
 				82C6A0CA18A6FF7400FEBE9B /* SpriteKit.framework */,
 				82C6A09218A6F53400FEBE9B /* Foundation.framework */,
 				82C6A09418A6F53400FEBE9B /* CoreGraphics.framework */,
@@ -198,6 +248,7 @@
 				82C6A0D218A790BA00FEBE9B /* Classes */,
 				82C6A0D918A7913200FEBE9B /* Resources */,
 				82C6A09918A6F53400FEBE9B /* Supporting Files */,
+				AA80C38318DAFD430005E000 /* Libs */,
 			);
 			path = spritybird;
 			sourceTree = "<group>";
@@ -289,12 +340,40 @@
 		82C6A0D918A7913200FEBE9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AA80C3A218DB082D0005E000 /* Froggy-Jump.mp3 */,
+				AA80C3A418DBF8D90005E000 /* Foggy-Drop.mp3 */,
 				82FEEB9318B550BF00AA6C66 /* Main-iPad.storyboard */,
 				82C6A0A418A6F53400FEBE9B /* Main.storyboard */,
 				8274FC3318A7F14000FEBCE7 /* Images */,
 				82C6A0AA18A6F53400FEBE9B /* Images.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA80C38318DAFD430005E000 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				AA80C38418DAFD430005E000 /* GoogleAdMobAdsSdkiOS-6.8.0 */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		AA80C38418DAFD430005E000 /* GoogleAdMobAdsSdkiOS-6.8.0 */ = {
+			isa = PBXGroup;
+			children = (
+				AA80C38518DAFD430005E000 /* GADAdMobExtras.h */,
+				AA80C38618DAFD430005E000 /* GADAdNetworkExtras.h */,
+				AA80C38718DAFD430005E000 /* GADAdSize.h */,
+				AA80C38818DAFD430005E000 /* GADBannerView.h */,
+				AA80C38918DAFD430005E000 /* GADBannerViewDelegate.h */,
+				AA80C38A18DAFD430005E000 /* GADInterstitial.h */,
+				AA80C38B18DAFD430005E000 /* GADInterstitialDelegate.h */,
+				AA80C38C18DAFD430005E000 /* GADRequest.h */,
+				AA80C38D18DAFD430005E000 /* GADRequestError.h */,
+				AA80C38E18DAFD430005E000 /* libGoogleAdMobAds.a */,
+				AA80C38F18DAFD430005E000 /* README.txt */,
+			);
+			path = "GoogleAdMobAdsSdkiOS-6.8.0";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +456,8 @@
 				823C184D18B3F1BB00C9BD2F /* medal_silver@2x.png in Resources */,
 				821A756818AD618A00B376D5 /* Images.xcassets in Resources */,
 				823C185118B3F1BB00C9BD2F /* game_over@2x.png in Resources */,
+				AA80C3A318DB082D0005E000 /* Froggy-Jump.mp3 in Resources */,
+				AA80C3A518DBF8D90005E000 /* Foggy-Drop.mp3 in Resources */,
 				823C185418B3FBCC00C9BD2F /* back@2x.png in Resources */,
 				82457DC018B2C3490042CF82 /* pipe_bottom@2x.png in Resources */,
 				823C184518B3E57F00C9BD2F /* taptap@2x.png in Resources */,
@@ -389,6 +470,7 @@
 				82457DBB18B2C3490042CF82 /* bird_1@2x.png in Resources */,
 				823C184618B3E57F00C9BD2F /* get_ready@2x.png in Resources */,
 				576A22CE18B9CB8E001338C0 /* Main.storyboard in Resources */,
+				AA80C39118DAFD430005E000 /* README.txt in Resources */,
 				82457DBD18B2C3490042CF82 /* bird_3@2x.png in Resources */,
 				82457DBE18B2C3490042CF82 /* floor@2x.png in Resources */,
 			);
@@ -547,7 +629,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spritybird/Supporting Files/spritybird-Prefix.pch";
 				INFOPLIST_FILE = "spritybird/Supporting Files/spritybird-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/spritybird/Libs/GoogleAdMobAdsSdkiOS-6.8.0",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = spritybird;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -563,7 +650,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spritybird/Supporting Files/spritybird-Prefix.pch";
 				INFOPLIST_FILE = "spritybird/Supporting Files/spritybird-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/spritybird/Libs/GoogleAdMobAdsSdkiOS-6.8.0",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = spritybird;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

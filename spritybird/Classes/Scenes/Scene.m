@@ -10,6 +10,7 @@
 #import "SKScrollingNode.h"
 #import "BirdNode.h"
 #import "Score.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 #define BACK_SCROLLING_SPEED .5
 #define FLOOR_SCROLLING_SPEED 3
@@ -238,8 +239,18 @@ static bool wasted = NO;
                 scoreLabel.fontSize = 340;
                 scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 120);
             }
+            
+            // Play Sound
+            [self playSoundWithPath:SOUND_JUMP];
         }
     }
+}
+
+-(void) playSoundWithPath:(NSString*)name {
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:name ofType:@"mp3"];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath: soundPath], &soundID);
+    AudioServicesPlaySystemSound (soundID);
 }
 
 #pragma mark - Physic
@@ -254,5 +265,9 @@ static bool wasted = NO;
     if([self.delegate respondsToSelector:@selector(eventWasted)]){
         [self.delegate eventWasted];
     }
+    
+    // Play Sound
+    [self playSoundWithPath:SOUND_HIT];
+    
 }
 @end
