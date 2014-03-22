@@ -29,3 +29,7 @@ static const uint32_t blockBitMask    =  0x1 << 3;
 #define REVISE_START 10
 #define REVISE_STEP 1
 
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+#define MAIN_STORYBOARD (IS_IPAD ? @"Main-iPad" : @"Main")
+

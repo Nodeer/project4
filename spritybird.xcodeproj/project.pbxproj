@@ -12,7 +12,6 @@
 		18E25A2918DD80A6002DEDF7 /* AGQuestionTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E25A2818DD80A6002DEDF7 /* AGQuestionTableItem.m */; };
 		18E25A2C18DD80BB002DEDF7 /* AGQuestionTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E25A2B18DD80BB002DEDF7 /* AGQuestionTableCell.m */; };
 		18E25A3218DD8BDA002DEDF7 /* AGQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E25A3018DD8BDA002DEDF7 /* AGQuestionViewController.m */; };
-		18E25A3318DD8BDA002DEDF7 /* AGQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E25A3118DD8BDA002DEDF7 /* AGQuestionViewController.xib */; };
 		576A22CE18B9CB8E001338C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6A0A418A6F53400FEBE9B /* Main.storyboard */; };
 		821A755618AD616C00B376D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0A218A6F53400FEBE9B /* AppDelegate.m */; };
 		821A755718AD617800B376D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C6A0A818A6F53400FEBE9B /* ViewController.m */; };
@@ -85,7 +84,6 @@
 		18E25A2B18DD80BB002DEDF7 /* AGQuestionTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuestionTableCell.m; sourceTree = "<group>"; };
 		18E25A2F18DD8BDA002DEDF7 /* AGQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGQuestionViewController.h; sourceTree = "<group>"; };
 		18E25A3018DD8BDA002DEDF7 /* AGQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGQuestionViewController.m; sourceTree = "<group>"; };
-		18E25A3118DD8BDA002DEDF7 /* AGQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGQuestionViewController.xib; sourceTree = "<group>"; };
 		823C184318B3E57F00C9BD2F /* taptap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taptap@2x.png"; sourceTree = "<group>"; };
 		823C184418B3E57F00C9BD2F /* get_ready@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "get_ready@2x.png"; sourceTree = "<group>"; };
 		823C184718B3F1BB00C9BD2F /* medal_silver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medal_silver@2x.png"; sourceTree = "<group>"; };
@@ -214,6 +212,13 @@
 			path = Classes/Views;
 			sourceTree = "<group>";
 		};
+		18E25A3918DDE20F002DEDF7 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		8274FC3318A7F14000FEBCE7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +301,7 @@
 				18E25A1F18DD7C47002DEDF7 /* Common */,
 				82C6A0D218A790BA00FEBE9B /* Classes */,
 				82C6A0D918A7913200FEBE9B /* Resources */,
+				18E25A3918DDE20F002DEDF7 /* iPad */,
 				82C6A09918A6F53400FEBE9B /* Supporting Files */,
 				AA80C38318DAFD430005E000 /* Libs */,
 			);
@@ -354,7 +360,6 @@
 				82C6A0A818A6F53400FEBE9B /* ViewController.m */,
 				18E25A2F18DD8BDA002DEDF7 /* AGQuestionViewController.h */,
 				18E25A3018DD8BDA002DEDF7 /* AGQuestionViewController.m */,
-				18E25A3118DD8BDA002DEDF7 /* AGQuestionViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -508,7 +513,6 @@
 				82457DBC18B2C3490042CF82 /* bird_2@2x.png in Resources */,
 				AA80C3BA18DD8EC60005E000 /* bird_3c@2x.png in Resources */,
 				823C184D18B3F1BB00C9BD2F /* medal_silver@2x.png in Resources */,
-				18E25A3318DD8BDA002DEDF7 /* AGQuestionViewController.xib in Resources */,
 				18E25A1D18DD7B60002DEDF7 /* mainfont.TTF in Resources */,
 				821A756818AD618A00B376D5 /* Images.xcassets in Resources */,
 				823C185118B3F1BB00C9BD2F /* game_over@2x.png in Resources */,
@@ -691,14 +695,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spritybird/Supporting Files/spritybird-Prefix.pch";
 				INFOPLIST_FILE = "spritybird/Supporting Files/spritybird-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/spritybird/Libs/GoogleAdMobAdsSdkiOS-6.8.0",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = spritybird;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -712,14 +716,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spritybird/Supporting Files/spritybird-Prefix.pch";
 				INFOPLIST_FILE = "spritybird/Supporting Files/spritybird-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/spritybird/Libs/GoogleAdMobAdsSdkiOS-6.8.0",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = spritybird;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

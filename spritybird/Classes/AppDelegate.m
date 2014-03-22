@@ -16,11 +16,11 @@
 {
     UINavigationController *navigationController;
     if (![[NSUserDefaults standardUserDefaults] boolForKey:SHOW_QUESTION_FIST_TIME]) {
-        AGQuestionViewController *questionController = [AGQuestionViewController new];
+        AGQuestionViewController *questionController = [[UIStoryboard storyboardWithName:MAIN_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:[[AGQuestionViewController class] description]];
         navigationController = [[UINavigationController alloc] initWithRootViewController:questionController];
     }
     else {
-        ViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:[[ViewController class] description]];
+        ViewController *viewController = [[UIStoryboard storyboardWithName:MAIN_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:[[ViewController class] description]];
         navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     }
     

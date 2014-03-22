@@ -79,7 +79,7 @@
 {
 //    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SHOW_QUESTION_FIST_TIME];
     
-    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:[[ViewController class] description]];
+    UIViewController *viewController = [[UIStoryboard storyboardWithName:MAIN_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:[[ViewController class] description]];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 @end
