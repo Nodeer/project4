@@ -28,6 +28,10 @@
     return [[NSUserDefaults standardUserDefaults] integerForKey:kBestScoreKey];
 }
 
++ (NSInteger) reviseScore {
+    return [[NSUserDefaults standardUserDefaults] integerForKey:kReviseScoreKey];
+}
+
 + (void) registerReviseScore:(NSInteger) score
 {
     NSInteger reviseScore = [[NSUserDefaults standardUserDefaults] integerForKey:kReviseScoreKey];

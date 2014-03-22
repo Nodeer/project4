@@ -16,5 +16,6 @@
 + (NSInteger) bestScore;
 + (void) registerReviseScore:(NSInteger) score;
 + (BOOL) isGainReviseScore:(NSInteger) score;
++ (NSInteger) reviseScore;
 
 @end

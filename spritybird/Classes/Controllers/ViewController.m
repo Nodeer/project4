@@ -138,7 +138,7 @@
         }
         
         // Set scores
-        self.currentScore.text = F(@"%li",scene.score);
+        self.currentScore.text = F(@"%li/%li",scene.score,[Score reviseScore]);
         self.bestScoreLabel.text = F(@"%li",(long)[Score bestScore]);
         
     } completion:^(BOOL finished) {
