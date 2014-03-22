@@ -7,12 +7,26 @@
 //
 
 #import "AppDelegate.h"
+#import "AGQuestionViewController.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //
+    UINavigationController *navigationController;
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:SHOW_QUESTION_FIST_TIME]) {
+        AGQuestionViewController *questionController = [AGQuestionViewController new];
+        navigationController = [[UINavigationController alloc] initWithRootViewController:questionController];
+    }
+    else {
+        ViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:[[ViewController class] description]];
+        navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    }
+    
+    [navigationController setNavigationBarHidden:YES];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
