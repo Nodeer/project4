@@ -139,7 +139,7 @@ static bool wasted = NO;
     
 }
 
-#pragma mark - Interaction 
+#pragma mark - Interaction
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
@@ -233,11 +233,24 @@ static bool wasted = NO;
         // Score, adapt font size
         if(X(topPipe) + WIDTH(topPipe)/2 > bird.position.x &&
            X(topPipe) + WIDTH(topPipe)/2 < bird.position.x + FLOOR_SCROLLING_SPEED){
-            self.score +=1;
+            self.score += 1;
+            
+            // Check revise
+            if ([Score isGainReviseScore:self.score]) {
+                // revise the bird -> change color
+                [bird birdRevised];
+            }
+            
             scoreLabel.text = [NSString stringWithFormat:@"%lu",self.score];
             if(self.score>=10){
                 scoreLabel.fontSize = 340;
                 scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 120);
+                
+            }
+            if(self.score>=100){
+                scoreLabel.fontSize = 240;
+                scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 150);
+                
             }
             
             // Play Sound
@@ -258,9 +271,10 @@ static bool wasted = NO;
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
     if(wasted){ return; }
-
+    
     wasted = true;
     [Score registerScore:self.score];
+    [Score registerReviseScore:self.score];
     
     if([self.delegate respondsToSelector:@selector(eventWasted)]){
         [self.delegate eventWasted];

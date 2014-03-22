@@ -32,7 +32,7 @@ static bool goingUp = false;
         birdTexture2.filteringMode = SKTextureFilteringNearest;
         SKTexture* birdTexture3 = [SKTexture textureWithImageNamed:@"bird_3"];
         birdTexture2.filteringMode = SKTextureFilteringNearest;
-
+        
         self = [BirdNode spriteNodeWithTexture:birdTexture1];
         
         self.flap = [SKAction animateWithTextures:@[birdTexture1, birdTexture2,birdTexture3] timePerFrame:0.2];
@@ -78,6 +78,22 @@ static bool goingUp = false;
     [self.physicsBody setVelocity:CGVectorMake(0, 0)];
     [self.physicsBody applyImpulse:CGVectorMake(0, 40)];
     [self runAction:self.flap];
+}
+
+- (void) birdRevised {
+    // TODO : use texture atlas
+    SKTexture* birdTexture1 = [SKTexture textureWithImageNamed:@"bird_1c"];
+    birdTexture1.filteringMode = SKTextureFilteringNearest;
+    SKTexture* birdTexture2 = [SKTexture textureWithImageNamed:@"bird_2c"];
+    birdTexture2.filteringMode = SKTextureFilteringNearest;
+    SKTexture* birdTexture3 = [SKTexture textureWithImageNamed:@"bird_3c"];
+    birdTexture2.filteringMode = SKTextureFilteringNearest;
+    
+    self.flap = [SKAction animateWithTextures:@[birdTexture1, birdTexture2,birdTexture3] timePerFrame:0.2];
+    self.flapForever = [SKAction repeatActionForever:self.flap];
+    
+    [self setTexture:birdTexture1];
+    [self runAction:self.flapForever withKey:@"flapForever"];
 }
 
 @end
