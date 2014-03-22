@@ -60,6 +60,9 @@
 		AA80C3A118DB009A0005E000 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA80C3A018DB009A0005E000 /* AVFoundation.framework */; };
 		AA80C3A318DB082D0005E000 /* Froggy-Jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA80C3A218DB082D0005E000 /* Froggy-Jump.mp3 */; };
 		AA80C3A518DBF8D90005E000 /* Foggy-Drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA80C3A418DBF8D90005E000 /* Foggy-Drop.mp3 */; };
+		AA80C3B818DD8EC60005E000 /* bird_1c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA80C3B518DD8EC60005E000 /* bird_1c@2x.png */; };
+		AA80C3BA18DD8EC60005E000 /* bird_3c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA80C3B718DD8EC60005E000 /* bird_3c@2x.png */; };
+		AA80C3BC18DD8EE70005E000 /* bird_2c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA80C3BB18DD8EE70005E000 /* bird_2c@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +155,9 @@
 		AA80C3A018DB009A0005E000 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AA80C3A218DB082D0005E000 /* Froggy-Jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Froggy-Jump.mp3"; sourceTree = "<group>"; };
 		AA80C3A418DBF8D90005E000 /* Foggy-Drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Foggy-Drop.mp3"; sourceTree = "<group>"; };
+		AA80C3B518DD8EC60005E000 /* bird_1c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bird_1c@2x.png"; sourceTree = "<group>"; };
+		AA80C3B718DD8EC60005E000 /* bird_3c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bird_3c@2x.png"; sourceTree = "<group>"; };
+		AA80C3BB18DD8EE70005E000 /* bird_2c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bird_2c@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,9 @@
 		8274FC3318A7F14000FEBCE7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AA80C3BB18DD8EE70005E000 /* bird_2c@2x.png */,
+				AA80C3B518DD8EC60005E000 /* bird_1c@2x.png */,
+				AA80C3B718DD8EC60005E000 /* bird_3c@2x.png */,
 				823C184718B3F1BB00C9BD2F /* medal_silver@2x.png */,
 				823C184818B3F1BB00C9BD2F /* medal_gold@2x.png */,
 				823C184918B3F1BB00C9BD2F /* medal_bronze@2x.png */,
@@ -497,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82457DBC18B2C3490042CF82 /* bird_2@2x.png in Resources */,
+				AA80C3BA18DD8EC60005E000 /* bird_3c@2x.png in Resources */,
 				823C184D18B3F1BB00C9BD2F /* medal_silver@2x.png in Resources */,
 				18E25A3318DD8BDA002DEDF7 /* AGQuestionViewController.xib in Resources */,
 				18E25A1D18DD7B60002DEDF7 /* mainfont.TTF in Resources */,
@@ -505,6 +515,7 @@
 				AA80C3A318DB082D0005E000 /* Froggy-Jump.mp3 in Resources */,
 				AA80C3A518DBF8D90005E000 /* Foggy-Drop.mp3 in Resources */,
 				823C185418B3FBCC00C9BD2F /* back@2x.png in Resources */,
+				AA80C3BC18DD8EE70005E000 /* bird_2c@2x.png in Resources */,
 				82457DC018B2C3490042CF82 /* pipe_bottom@2x.png in Resources */,
 				823C184518B3E57F00C9BD2F /* taptap@2x.png in Resources */,
 				823C184E18B3F1BB00C9BD2F /* medal_gold@2x.png in Resources */,
@@ -517,6 +528,7 @@
 				823C184618B3E57F00C9BD2F /* get_ready@2x.png in Resources */,
 				576A22CE18B9CB8E001338C0 /* Main.storyboard in Resources */,
 				AA80C39118DAFD430005E000 /* README.txt in Resources */,
+				AA80C3B818DD8EC60005E000 /* bird_1c@2x.png in Resources */,
 				82457DBD18B2C3490042CF82 /* bird_3@2x.png in Resources */,
 				82457DBE18B2C3490042CF82 /* floor@2x.png in Resources */,
 			);

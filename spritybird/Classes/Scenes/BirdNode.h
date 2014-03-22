@@ -10,4 +10,5 @@
 - (void) update:(NSUInteger) currentTime;
 - (void) startPlaying;
 - (void) bounce;
+- (void) birdRevised;
 @end

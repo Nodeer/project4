@@ -7,11 +7,14 @@
 //
 
 #define kBestScoreKey @"BestScore"
+#define kReviseScoreKey @"ReviseScore"
 
 @interface Score : NSObject
 
 + (void) registerScore:(NSInteger) score;
 + (void) setBestScore:(NSInteger) bestScore;
 + (NSInteger) bestScore;
++ (void) registerReviseScore:(NSInteger) score;
++ (BOOL) isGainReviseScore:(NSInteger) score;
 
 @end

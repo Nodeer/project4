@@ -28,4 +28,24 @@
     return [[NSUserDefaults standardUserDefaults] integerForKey:kBestScoreKey];
 }
 
++ (void) registerReviseScore:(NSInteger) score
+{
+    NSInteger reviseScore = [[NSUserDefaults standardUserDefaults] integerForKey:kReviseScoreKey];
+    if (score >= reviseScore) {
+        reviseScore += REVISE_STEP;
+        [[NSUserDefaults standardUserDefaults] setInteger:reviseScore forKey:kReviseScoreKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
++ (BOOL) isGainReviseScore:(NSInteger) score
+{
+    NSInteger reviseScore = [[NSUserDefaults standardUserDefaults] integerForKey:kReviseScoreKey];
+    
+    if (score >= reviseScore) {
+        return YES;
+    }
+    return NO;
+}
+
 @end

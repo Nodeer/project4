@@ -68,6 +68,9 @@
     self.adBanner.rootViewController = self;
     [self.view addSubview:self.adBanner];
     [self.adBanner loadRequest:[self request]];
+    
+    // Score Revise
+    [Score registerReviseScore:1];
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -87,7 +90,7 @@
         
     } completion:^(BOOL finished) {
         [flash removeFromSuperview];
-
+        
     }];
 }
 
@@ -101,7 +104,11 @@
 
 - (void)eventWasted
 {
-    self.adBanner.alpha = 1;
+    
+    [self.adBanner loadRequest:[self request]];
+    [UIView animateWithDuration:.5 animations:^{
+        self.adBanner.alpha = 1;
+    }];
     
     flash = [[UIView alloc] initWithFrame:self.view.frame];
     flash.backgroundColor = [UIColor whiteColor];
