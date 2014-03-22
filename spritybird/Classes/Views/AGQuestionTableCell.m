@@ -53,4 +53,14 @@
         self.textLabel.textColor = [UIColor colorWithRed:252.0f/255.0f green:184.0f/255.0f blue:0.0f alpha:1.0f];
     }
 }
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    CGRect r = self.textLabel.frame;
+    r.origin.x = 50;
+    r.size.width = 250;
+    self.textLabel.frame = r;
+}
 @end

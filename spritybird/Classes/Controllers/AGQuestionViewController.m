@@ -77,7 +77,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SHOW_QUESTION_FIST_TIME];
+//    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SHOW_QUESTION_FIST_TIME];
     
     UIViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:[[ViewController class] description]];
     [self.navigationController pushViewController:viewController animated:YES];
