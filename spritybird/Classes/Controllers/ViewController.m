@@ -21,6 +21,7 @@
 @property (weak,nonatomic) IBOutlet UIImageView * medalImageView;
 @property (weak,nonatomic) IBOutlet UILabel * currentScore;
 @property (weak,nonatomic) IBOutlet UILabel * bestScoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reviseLabel;
 
 @property(nonatomic, strong) GADBannerView *adBanner;
 
@@ -42,6 +43,26 @@
 	// Configure the view.
     //self.gameView.showsFPS = YES;
     //self.gameView.showsNodeCount = YES;
+    
+    // Score Revise
+    [Score registerReviseScore:1];
+    
+    // Config View
+    self.reviseLabel.numberOfLines = 0;
+    self.reviseLabel.text = F(@"Revise the ghost flappy bird at score: %li",(long)[Score reviseScore]);
+    self.reviseLabel.font = [UIFont fontWithName:APP_FONT size:21.0f];
+    self.reviseLabel.shadowOffset = CGSizeMake(1.0, 1.0);
+    self.reviseLabel.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.6f];
+    
+    self.currentScore.font = [UIFont fontWithName:APP_FONT size:17.0f];
+    self.currentScore.shadowOffset = CGSizeMake(1.0, 1.0);
+    self.currentScore.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.6f];
+    
+    
+    self.bestScoreLabel.font = [UIFont fontWithName:APP_FONT size:17.0f];
+    self.bestScoreLabel.shadowOffset = CGSizeMake(1.0, 1.0);
+    self.bestScoreLabel.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.6f];
+    
     
     // Create and configure the scene.
     scene = [Scene sceneWithSize:self.gameView.bounds.size];
@@ -138,8 +159,10 @@
         }
         
         // Set scores
-        self.currentScore.text = F(@"%li/%li",scene.score,[Score reviseScore]);
+        self.currentScore.text = F(@"%li/%li",(long)scene.score,(long)[Score reviseScore]);
         self.bestScoreLabel.text = F(@"%li",(long)[Score bestScore]);
+        
+        self.reviseLabel.text = F(@"Revise the ghost flappy bird at score: %li",(long)[Score reviseScore]);    
         
     } completion:^(BOOL finished) {
         flash.userInteractionEnabled = NO;

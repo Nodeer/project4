@@ -241,7 +241,7 @@ static bool wasted = NO;
                 [bird birdRevised];
             }
             
-            scoreLabel.text = [NSString stringWithFormat:@"%lu",self.score];
+            scoreLabel.text = [NSString stringWithFormat:@"%lu",(long)self.score];
             if(self.score>=10){
                 scoreLabel.fontSize = 340;
                 scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), 120);

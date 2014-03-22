@@ -24,6 +24,8 @@ static const uint32_t blockBitMask    =  0x1 << 3;
 
 #define ApplicationDelegate ((ATAppDelegate *)[UIApplication sharedApplication].delegate)
 
+
 // Score
-#define REVISE_STEP 10
+#define REVISE_START 10
+#define REVISE_STEP 1
 

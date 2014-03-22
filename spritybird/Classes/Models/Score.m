@@ -35,7 +35,13 @@
 + (void) registerReviseScore:(NSInteger) score
 {
     NSInteger reviseScore = [[NSUserDefaults standardUserDefaults] integerForKey:kReviseScoreKey];
-    if (score >= reviseScore) {
+    if (reviseScore == 0) {
+        // Init Score
+        reviseScore = REVISE_START;
+        [[NSUserDefaults standardUserDefaults] setInteger:reviseScore forKey:kReviseScoreKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    } else if (score >= reviseScore) {
+        // Inscrease Score
         reviseScore += REVISE_STEP;
         [[NSUserDefaults standardUserDefaults] setInteger:reviseScore forKey:kReviseScoreKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
