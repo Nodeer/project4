@@ -17,3 +17,10 @@ static const uint32_t blockBitMask    =  0x1 << 3;
 
 #define SOUND_JUMP @"Froggy-Jump"
 #define SOUND_HIT  @"Foggy-Drop"
+#define APP_FONT @"04b_19"
+#define SHOW_QUESTION_FIST_TIME @"SHOW_QUESTION_FIST_TIME"
+
+#define ApplicationDelegate ((ATAppDelegate *)[UIApplication sharedApplication].delegate)
+
+
+

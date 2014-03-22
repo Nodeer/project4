@@ -11,6 +11,7 @@
 #import "Score.h"
 #import "GADBannerView.h"
 #import "GADRequest.h"
+#import "AGQuestionViewController.h"
 
 @interface ViewController () <GADBannerViewDelegate>
 @property (weak,nonatomic) IBOutlet SKView * gameView;
@@ -68,7 +69,6 @@
     [self.view addSubview:self.adBanner];
     [self.adBanner loadRequest:[self request]];
 }
-
 
 - (BOOL)prefersStatusBarHidden
 {
