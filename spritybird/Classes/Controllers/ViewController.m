@@ -80,7 +80,11 @@
     CGPoint origin = CGPointMake(0.0,0);
     
     // Use predefined GADAdSize constants to define the GADBannerView.
-    self.adBanner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:origin];
+    if (ISIPAD) {
+        self.adBanner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait origin:origin];
+    } else {
+        self.adBanner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:origin];
+    }
     
     // Note: Edit SampleConstants.h to provide a definition for kSampleAdUnitID before compiling.
     self.adBanner.adUnitID = kSampleAdUnitID;

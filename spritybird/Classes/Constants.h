@@ -12,8 +12,10 @@ static const uint32_t birdBitMask     =  0x1 << 1;
 static const uint32_t floorBitMask    =  0x1 << 2;
 static const uint32_t blockBitMask    =  0x1 << 3;
 
+#define ISIPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
 // You should set this ad unit ID from your account before compiling.
-#define kSampleAdUnitID @"a1532aa79a7b7fd"
+#define kSampleAdUnitID (ISIPAD ? @"a1532e39ae0765a" : @"a1532aa79a7b7fd")
 
 
 // Sound
@@ -29,7 +31,6 @@ static const uint32_t blockBitMask    =  0x1 << 3;
 #define REVISE_START 10
 #define REVISE_STEP 1
 
-#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
-#define MAIN_STORYBOARD (IS_IPAD ? @"Main-iPad" : @"Main")
+#define MAIN_STORYBOARD (ISIPAD ? @"Main-iPad" : @"Main")
 
