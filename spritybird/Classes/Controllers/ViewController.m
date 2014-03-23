@@ -48,7 +48,7 @@
     
     // Config View
     self.reviseLabel.numberOfLines = 0;
-    self.reviseLabel.text = F(@"Revise the ghost flappy bird at score: %li",(long)[Score reviseScore]);
+    self.reviseLabel.text = F(@"Revise the Flappy Bird at score: %li",(long)[Score reviseScore]);
     self.reviseLabel.font = [UIFont fontWithName:APP_FONT size:21.0f];
     self.reviseLabel.shadowOffset = CGSizeMake(1.0, 1.0);
     self.reviseLabel.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.6f];

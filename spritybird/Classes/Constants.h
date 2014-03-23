@@ -32,5 +32,7 @@ static const uint32_t blockBitMask    =  0x1 << 3;
 #define REVISE_STEP 1
 
 
-#define MAIN_STORYBOARD (ISIPAD ? @"Main-iPad" : @"Main")
+// Trong Vu support iphone compatible for now
+//#define MAIN_STORYBOARD (ISIPAD ? @"Main-iPad" : @"Main")
+#define MAIN_STORYBOARD (ISIPAD ? @"Main" : @"Main")
 
