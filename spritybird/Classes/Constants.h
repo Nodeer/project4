@@ -36,3 +36,7 @@ static const uint32_t blockBitMask    =  0x1 << 3;
 //#define MAIN_STORYBOARD (ISIPAD ? @"Main-iPad" : @"Main")
 #define MAIN_STORYBOARD (ISIPAD ? @"Main" : @"Main")
 
+// Score
+#define OBSTACLE_LOTUS 0
+#define OBSTACLE_WOOD 1
+

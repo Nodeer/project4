@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController<SceneDelegate>
 
+@property (nonatomic) NSInteger obstacleType;
+
 @end

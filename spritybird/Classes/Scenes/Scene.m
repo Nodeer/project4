@@ -37,10 +37,20 @@ static bool wasted = NO;
 - (id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         self.physicsWorld.contactDelegate = self;
+//        [self startGame];
+    }
+    return self;
+}
+
+- (id)initWithSize:(CGSize)size withObstacleType:(NSInteger)obstacleType {
+    if (self = [super initWithSize:size]) {
+        self.obstacleType = obstacleType;
+        self.physicsWorld.contactDelegate = self;
         [self startGame];
     }
     return self;
 }
+
 
 - (void) startGame
 {
@@ -117,13 +127,22 @@ static bool wasted = NO;
     bottomPipes = @[].mutableCopy;
     topPipes = @[].mutableCopy;
     for(int i=0;i<nbObstacles;i++){
-        
-        SKSpriteNode * topPipe = [SKSpriteNode spriteNodeWithImageNamed:@"pipe_top"];
+        SKSpriteNode * topPipe;
+        if (self.obstacleType == OBSTACLE_LOTUS) {
+            topPipe = [SKSpriteNode spriteNodeWithImageNamed:@"lotus_top"];
+        } else {
+            topPipe = [SKSpriteNode spriteNodeWithImageNamed:@"wood_top"];
+        }
         [topPipe setAnchorPoint:CGPointZero];
         [self addChild:topPipe];
         [topPipes addObject:topPipe];
         
-        SKSpriteNode * bottomPipe = [SKSpriteNode spriteNodeWithImageNamed:@"pipe_bottom"];
+        SKSpriteNode * bottomPipe;
+        if (self.obstacleType == OBSTACLE_LOTUS) {
+            bottomPipe = [SKSpriteNode spriteNodeWithImageNamed:@"lotus_bottom"];
+        } else {
+            bottomPipe = [SKSpriteNode spriteNodeWithImageNamed:@"wood_bottom"];
+        }
         [bottomPipe setAnchorPoint:CGPointZero];
         [self addChild:bottomPipe];
         [bottomPipes addObject:bottomPipe];
@@ -219,6 +238,8 @@ static bool wasted = NO;
     topPipe.position = CGPointMake(xPos,bottomPosY + HEIGHT(bottomPipe) + VERTICAL_GAP_SIZE);
     topPipe.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, WIDTH(topPipe), HEIGHT(topPipe))];
     
+    topPipe.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0,0, WIDTH(topPipe), HEIGHT(topPipe))];
+    
     topPipe.physicsBody.categoryBitMask = blockBitMask;
     topPipe.physicsBody.contactTestBitMask = birdBitMask;
 }
@@ -238,7 +259,7 @@ static bool wasted = NO;
             // Check revise
             if ([Score isGainReviseScore:self.score]) {
                 // revise the bird -> change color
-                [bird birdRevised];
+//                [bird birdRevised];
             }
             
             scoreLabel.text = [NSString stringWithFormat:@"%lu",(long)self.score];

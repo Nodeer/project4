@@ -47,11 +47,13 @@
     [Score registerReviseScore:1];
     
     // Config View
-    self.reviseLabel.numberOfLines = 0;
-    self.reviseLabel.text = F(@"Revise the Flappy Bird at score: %li",(long)[Score reviseScore]);
-    self.reviseLabel.font = [UIFont fontWithName:APP_FONT size:21.0f];
-    self.reviseLabel.shadowOffset = CGSizeMake(1.0, 1.0);
-    self.reviseLabel.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.6f];
+//    self.reviseLabel.numberOfLines = 0;
+//    self.reviseLabel.text = F(@"Revise the Flappy Bird at score: %li",(long)[Score reviseScore]);
+//    self.reviseLabel.font = [UIFont fontWithName:APP_FONT size:21.0f];
+//    self.reviseLabel.shadowOffset = CGSizeMake(1.0, 1.0);
+//    self.reviseLabel.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.6f];
+    
+    self.reviseLabel.text = @"";
     
     self.currentScore.font = [UIFont fontWithName:APP_FONT size:17.0f];
     self.currentScore.shadowOffset = CGSizeMake(1.0, 1.0);
@@ -65,6 +67,8 @@
     
     // Create and configure the scene.
     scene = [Scene sceneWithSize:self.gameView.bounds.size];
+    scene.obstacleType = self.obstacleType;
+    [scene startGame];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     scene.delegate = self;
     
@@ -162,10 +166,11 @@
         }
         
         // Set scores
-        self.currentScore.text = F(@"%li/%li",(long)scene.score,(long)[Score reviseScore]);
+//        self.currentScore.text = F(@"%li/%li",(long)scene.score,(long)[Score reviseScore]);
+        self.currentScore.text = F(@"%li",(long)scene.score);
         self.bestScoreLabel.text = F(@"%li",(long)[Score bestScore]);
-        
-        self.reviseLabel.text = F(@"Revise the ghost flappy bird at score: %li",(long)[Score reviseScore]);    
+        self.reviseLabel.text = @"";
+//        self.reviseLabel.text = F(@"Revise the ghost flappy bird at score: %li",(long)[Score reviseScore]);    
         
     } completion:^(BOOL finished) {
         flash.userInteractionEnabled = NO;

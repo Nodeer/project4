@@ -17,6 +17,9 @@
 
 @property (unsafe_unretained,nonatomic) id<SceneDelegate> delegate;
 @property (nonatomic) NSInteger score;
+@property (nonatomic) NSInteger obstacleType;
+
+- (id)initWithSize:(CGSize)size withObstacleType:(NSInteger)obstacleType;
 
 - (void) startGame;
 

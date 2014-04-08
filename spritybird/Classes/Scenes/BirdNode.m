@@ -26,11 +26,11 @@ static bool goingUp = false;
     if(self = [super init]){
         
         // TODO : use texture atlas
-        SKTexture* birdTexture1 = [SKTexture textureWithImageNamed:@"bird_1"];
+        SKTexture* birdTexture1 = [SKTexture textureWithImageNamed:@"frog_1"];
         birdTexture1.filteringMode = SKTextureFilteringNearest;
-        SKTexture* birdTexture2 = [SKTexture textureWithImageNamed:@"bird_2"];
+        SKTexture* birdTexture2 = [SKTexture textureWithImageNamed:@"frog_2"];
         birdTexture2.filteringMode = SKTextureFilteringNearest;
-        SKTexture* birdTexture3 = [SKTexture textureWithImageNamed:@"bird_3"];
+        SKTexture* birdTexture3 = [SKTexture textureWithImageNamed:@"frog_3"];
         birdTexture2.filteringMode = SKTextureFilteringNearest;
         
         self = [BirdNode spriteNodeWithTexture:birdTexture1];

@@ -34,16 +34,10 @@
     self.datasource = [NSMutableArray array];
     // add list question
     // 1
-    AGQuestionTableItem *item = [[AGQuestionTableItem alloc] initWithTitle:@"1 week"];
+    AGQuestionTableItem *item = [[AGQuestionTableItem alloc] initWithTitle:@"Lotus leaf"];
     [self.datasource addObject:item];
     // 2
-    item = [[AGQuestionTableItem alloc] initWithTitle:@"1 month"];
-    [self.datasource addObject:item];
-    // 3
-    item = [[AGQuestionTableItem alloc] initWithTitle:@"1 year"];
-    [self.datasource addObject:item];
-    // 4
-    item = [[AGQuestionTableItem alloc] initWithTitle:@"never"];
+    item = [[AGQuestionTableItem alloc] initWithTitle:@"Wood branch"];
     [self.datasource addObject:item];
     
     // reload table
@@ -79,7 +73,8 @@
 {
 //    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SHOW_QUESTION_FIST_TIME];
     
-    UIViewController *viewController = [[UIStoryboard storyboardWithName:MAIN_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:[[ViewController class] description]];
+    ViewController *viewController = [[UIStoryboard storyboardWithName:MAIN_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:[[ViewController class] description]];
+    viewController.obstacleType = indexPath.row;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 @end
